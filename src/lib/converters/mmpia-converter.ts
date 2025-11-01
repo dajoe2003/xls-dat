@@ -108,8 +108,11 @@ function extractTimeHHMM(value: any): string {
   }
   
   if (date) {
-    const hours = String(date.getHours()).padStart(2, '0');
-    const minutes = String(date.getMinutes()).padStart(2, '0');
+    // Add 18 minutes to fix observed time discrepancy
+    const adjusted = new Date(date);
+    adjusted.setMinutes(adjusted.getMinutes() + 18);
+    const hours = String(adjusted.getHours()).padStart(2, '0');
+    const minutes = String(adjusted.getMinutes()).padStart(2, '0');
     return `${hours}${minutes}`;
   }
   return '0000';
