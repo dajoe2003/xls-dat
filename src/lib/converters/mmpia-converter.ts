@@ -15,7 +15,7 @@ export interface MMPIAData {
 
 // Convert Excel serial date number to JavaScript Date
 function excelSerialToDate(serial: number): Date {
-  const epoch = new Date(1899, 11, 30);
+  const epoch = new Date(1899, 11, 31); // Changed from 30 to 31 to fix off-by-one day issue
   const intPart = Math.floor(serial);
   const fracPart = serial - intPart;
   const milliseconds = intPart * 24 * 60 * 60 * 1000 + fracPart * 24 * 60 * 60 * 1000;
