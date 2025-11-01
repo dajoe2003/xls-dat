@@ -81,9 +81,12 @@ function formatDateMMDDYY(value: any): string {
   }
   
   if (date) {
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const day = String(date.getDate()).padStart(2, '0');
-    const year = String(date.getFullYear()).slice(-2);
+    // Adjust by +1 day to fix off-by-one issue observed in source spreadsheets
+    const adjusted = new Date(date);
+    adjusted.setDate(adjusted.getDate() + 1);
+    const month = String(adjusted.getMonth() + 1).padStart(2, '0');
+    const day = String(adjusted.getDate()).padStart(2, '0');
+    const year = String(adjusted.getFullYear()).slice(-2);
     return `${month}${day}${year}`;
   }
   return '';
