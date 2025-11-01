@@ -13,7 +13,7 @@ export function Header() {
             <FileSpreadsheet className="h-6 w-6 text-primary" />
           </div>
           <div>
-            <h1 className="text-xl font-bold text-foreground">XLS to DAT Converter</h1>
+            <h1 className="text-xl font-bold text-foreground">XLS to DAT</h1>
             <p className="text-sm text-muted-foreground">Psychological Test Data Converter</p>
           </div>
         </div>
