@@ -103,8 +103,7 @@ export function SelectStep() {
             <CardTitle>Select Participants</CardTitle>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
-                <span className="text-sm text-muted-foreground">Filter by location:</span>
-                <Select value={tempatTesFilter} onValueChange={setTempatTesFilter}>
+              <Select value={tempatTesFilter} onValueChange={setTempatTesFilter}>
                   <SelectTrigger className="w-[200px]">
                     <SelectValue />
                   </SelectTrigger>
@@ -136,13 +135,13 @@ export function SelectStep() {
                     className="cursor-pointer hover:bg-muted/80 transition-colors"
                     onClick={() => handleSort('number')}
                   >
-                    Number
+                    No.
                   </TableHead>
                   <TableHead 
                     className="cursor-pointer hover:bg-muted/80 transition-colors"
                     onClick={() => handleSort('timestamp')}
                   >
-                    Tanggal Tes
+                    Tanggal
                   </TableHead>
                   <TableHead 
                     className="cursor-pointer hover:bg-muted/80 transition-colors"
@@ -154,7 +153,7 @@ export function SelectStep() {
                     className="cursor-pointer hover:bg-muted/80 transition-colors"
                     onClick={() => handleSort('tempatTes')}
                   >
-                    Tempat Tes
+                    Lokasi
                   </TableHead>
                 </TableRow>
               </TableHeader>
