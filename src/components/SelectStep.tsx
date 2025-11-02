@@ -100,7 +100,10 @@ export function SelectStep() {
       <Card>
         <CardHeader>
           <div className="flex items-center justify-between">
-            <CardTitle>Select Participants</CardTitle>
+            <CardTitle>
+              <span className="md:hidden">Select</span>
+              <span className="hidden md:inline">Select Participants</span>
+            </CardTitle>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
               <Select value={tempatTesFilter} onValueChange={setTempatTesFilter}>
