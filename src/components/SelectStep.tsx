@@ -135,13 +135,13 @@ export function SelectStep() {
                     />
                   </TableHead>
                   <TableHead 
-                    className="cursor-pointer hover:bg-muted/80 transition-colors"
+                    className="hidden md:table-cell cursor-pointer hover:bg-muted/80 transition-colors"
                     onClick={() => handleSort('number')}
                   >
                     No.
                   </TableHead>
                   <TableHead 
-                    className="cursor-pointer hover:bg-muted/80 transition-colors"
+                    className="hidden md:table-cell cursor-pointer hover:bg-muted/80 transition-colors"
                     onClick={() => handleSort('timestamp')}
                   >
                     Tanggal
@@ -175,8 +175,8 @@ export function SelectStep() {
                           onCheckedChange={() => toggleParticipant(originalIndex)}
                         />
                       </TableCell>
-                      <TableCell className="font-medium">{originalIndex + 1}</TableCell>
-                      <TableCell>{formatDate(participant.timestamp)}</TableCell>
+                      <TableCell className="hidden md:table-cell font-medium">{originalIndex + 1}</TableCell>
+                      <TableCell className="hidden md:table-cell">{formatDate(participant.timestamp)}</TableCell>
                       <TableCell>{participant.nama}</TableCell>
                       <TableCell>{participant.tempatTes}</TableCell>
                     </TableRow>
